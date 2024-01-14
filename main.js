@@ -1,10 +1,10 @@
-function task1()
+function task1_1()
 {
     let num = prompt("Enter number");
     alert(`${num} ^ 2 = ${Math.pow(num, 2)}`);
 }
 
-function task2()
+function task1_2()
 {
     let num1 = parseInt(prompt("Enter num1"));
     let num2 =parseInt(prompt("Enter num2"));
@@ -12,13 +12,13 @@ function task2()
     alert(`Avg = ${(num1+num2)/2}`)
 }
 
-function task3()
+function task1_3()
 {
     let num = prompt("Enter one side lenth:");
     alert(`Ares is: ${Math.pow(num, 2)}`);
 }
 
-function task4()
+function task1_4()
 {
     let kilometres = parseFloat(prompt("Enter kilometres"));
     const mile = 0.621371;
@@ -26,7 +26,7 @@ function task4()
     alert(kilometres*mile);
 }
 
-function task5()
+function task1_5()
 {
     let num1 = parseInt(prompt("Enter num1"));
     let num2 =parseInt(prompt("Enter num2"));
@@ -37,14 +37,14 @@ function task5()
     ${num1} / ${num2} = ${num1/num2}\n`);
 }
 
-function task6()
+function task1_6()
 {
     let a = parseInt(prompt("Enter a"));
     let b =parseInt(prompt("Enter b"));
 
     alert(`x = ${-b/a}`);
 }
-function task7()
+function task1_7()
 {
     let hours = parseInt(prompt("Enter curr hour"));
     let minutes = parseInt(prompt("Enter curr minute"));
@@ -52,7 +52,7 @@ function task7()
     alert(`${23-hours}: ${60-minutes}`);
 }
 
-function task8()
+function task1_8()
 {
     let num = parseInt(prompt("Enter 3 digit num"));
 
@@ -61,7 +61,7 @@ function task8()
     alert(`${parseInt(num)}`);
 }
 
-function task9()
+function task1_9()
 {
     let num = prompt("Enter 5 digit num");
     let last = num%10;
@@ -69,7 +69,7 @@ function task9()
     alert((last*10000)+parseInt(num));
 }
 
-function task10()
+function task1_10()
 {
     const baseSalaty = 250;
     let salesAmount = parseInt(prompt("Enter sales"));
@@ -77,7 +77,7 @@ function task10()
     alert(`Salary is ${baseSalaty+((salesAmount/100)*10)}$`);
 }
 
-function task1_1()
+function task2_1_1()
 {
     let num = prompt("Enter number");
     if(num == 0)
@@ -95,7 +95,7 @@ function task1_1()
     alert("is positive");
 }
 
-function task1_2()
+function task2_1_2()
 {
     let age = parseInt(prompt("Enter age"));
 
@@ -108,7 +108,7 @@ function task1_2()
     alert("All correct");
 }
 
-function task1_3()
+function task2_1_3()
 {
     let num = parseInt(prompt("Enter number"));
 
@@ -121,7 +121,7 @@ function task1_3()
     alert(num)
 }
 
-function task1_4()
+function task2_1_4()
 {
   
     let hours = prompt("Enter hours");
@@ -147,7 +147,7 @@ function task1_4()
     alert("All correct");
 }
 
-function task1_5()
+function task2_1_5()
 {
     let X = parseInt(prompt("Enter X"));
     let Y = parseInt(prompt("Enter Y"));
@@ -179,7 +179,7 @@ function task1_5()
     alert("zero coordinate");
 }
 
-function task2_1()
+function task2_2_1()
 {
     let numOfMonth = prompt("Enter num of month");
     switch (numOfMonth)
@@ -232,7 +232,7 @@ function task2_1()
     }
 }
 
-function task2_2()
+function task2_2_2()
 {
     let num1 = parseInt(prompt("Enter num1"));
     let symbol = prompt("Enter symbol").charAt(0)
@@ -260,21 +260,157 @@ function task2_2()
    
 }
 
-
-function task3_1()
+function task2_3_1()
 {
     let num1 = parseInt(prompt("Enter num1"));
     let num2 =parseInt(prompt("Enter num2"));
     num1>num2?alert(num1):alert(num2);
 }
 
-function task3_2()
+function task2_3_2()
 {
     let num = parseInt(prompt("Enter num"));
     num%5==0?alert("true"):alert("fasle");
 }
-function task3_3()
+
+function task2_3_3()
 {
     let word = prompt("Enter word");
     word.toLowerCase()=="земля"? alert("Привіт, землянине!"):alert("Привіт, інопланетянине!");
+}
+
+function task3_1_1()
+{
+    let num = parseInt(prompt("Enter number"));
+    let string= "";
+
+    while(num!=0)
+    {
+        string += "#  ";
+        --num;
+    }
+    
+    alert(string);
+
+}
+
+
+function task3_1_2()
+{
+    let num = parseInt(prompt("Enter number"));
+
+    while(num!=0)
+        alert(num--);
+
+    alert(num);
+}
+
+function task3_1_3()
+{
+    let num = parseInt(prompt("Enter number"));
+    const root = num;
+    let mult = parseInt(prompt("Enter mult"));
+
+    while(mult!=1)
+    {
+        num*=root;
+        --mult;
+    }
+
+    alert(num);
+}
+
+function task3_1_4()
+{
+    let num1 = parseInt(prompt("Enter number1"));
+    let num2 = parseInt(prompt("Enter number2"));
+    let step = 2;
+    let max = Math.max(num1,num2);
+
+    while(step < max)
+    {
+        if(num1%step ==0  &&num2%step==0)
+            alert(step);
+        ++step;
+    }
+}
+
+function task3_1_5()
+{
+    let num = parseInt(prompt("Enter number"));
+    let factorial = 1;
+
+    while(num!=0)
+        factorial *= num--;
+
+    alert(factorial);
+}
+
+function task3_2_1()
+{
+    let num = 0;
+    do
+     {
+        num = parseInt(prompt("Enter number"));
+
+        if(num!=(2 + 2 * 2))
+            alert("wrong");
+
+     }while(num != (2 + 2 * 2));
+
+    alert("correct");
+
+}
+
+function task3_2_2()
+{
+    let num = 1000;
+    let coumt = 0;
+
+    do
+    {
+        num/=2;
+        coumt++;
+    }while(num > 50)
+
+    alert(`${num} count: ${coumt}`)
+    
+}
+
+function task3_3_1()
+{
+    let num = parseInt(prompt("Enter number"));
+    for(let i =1; i < 100; i++)
+    {
+        if( i%num== 0)
+         alert(i);
+    }
+}
+
+function task3_3_2()
+{
+    let min = parseInt(prompt("Enter min"));
+    let max = parseInt(prompt("Enter max"));
+
+    for(min; min < max; min+=4)
+        alert(min);
+}
+
+function task3_3_3()
+{
+    let num = parseInt(prompt("Enter number"));
+    let count = 0;
+    for(let i = 1; i < num; i++)
+    {
+        if(num%i==0)
+        {  
+              count++;
+            if(count > 2)
+            {
+                alert("is not prime")
+                return;
+            }
+        }
+    }
+    alert("is prime")
 }
