@@ -414,3 +414,112 @@ function task3_3_3()
     }
     alert("is prime")
 }
+
+function task4_1()
+{
+    let num = parseInt(prompt("Enter number"));
+    forTask4_1(1,num);
+
+}
+function forTask4_1(step, number)
+{
+    number *= number-step;
+    if(number <= 0)
+     {
+        alert(number);
+           return;
+     }
+    forTask4_1(step, number);
+    
+}
+
+function task4_2()
+{
+    const constMin = parseInt(prompt("Enter min"));
+    const constMax = parseInt(prompt("Enter max"));
+
+    let min = constMin;
+    let max = constMax;
+
+    forTask4_2_1(min, max);
+
+     min = constMin;
+     max = constMax;
+
+    forTask4_2_2(min, max);
+}
+
+function forTask4_2_1(min, max)
+{ 
+    alert(min);
+     min++;
+    if(min > max)
+        return;  
+    forTask4_2_1(min, max);
+    
+}
+
+function forTask4_2_2(min, max)
+{ 
+    alert(max);
+    max--;
+    if(min > max )
+        return;  
+    forTask4_2_2(min, max);
+}
+
+function  task4_3()
+{
+    let num = parseInt(prompt("Enter number"));
+    forTask4_3(num, 0)
+}
+
+function forTask4_3(number, n)
+{
+    n+= number%10;
+    number = parseInt(number/10); 
+    n*=10;
+
+    if(number <= 0)
+     {
+        alert(parseInt(n/10)); 
+        return;
+    }
+    forTask4_3(number, n);
+}
+
+function task4_4()
+{
+    let num = parseInt(prompt("Enter number"));
+    forTask4_4(num, 0)
+}
+
+function forTask4_4(number, n)
+{
+    n+= number%10;
+    number = parseInt(number/10); 
+    if(number <= 0)
+     {
+        alert(n); 
+        return;
+    }
+    forTask4_4(number, n);
+}
+
+function task4_5()
+{
+    let num = parseInt(prompt("Enter number"));
+    forTask4_5(num, "")
+
+}
+
+function forTask4_5(number, str)
+{
+    str.length>=number? str+=")":str+="(";
+    if(str.length >= number*2)
+    {
+        alert(str);
+            return;
+    }
+    forTask4_5(number, str);
+}
