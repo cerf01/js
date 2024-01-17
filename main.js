@@ -710,9 +710,11 @@ function  hwTask2_4()
 
 function  hwTask2_5()
 {
-    let num = parseInt(prompt("Enter a 5 digit number")); 
-
-    const constNum = num;
+    let num = prompt("Enter a 5 digit number"); 
+    if(num.length!=5)
+        return;
+    
+    const constNum = parseInt(num);
 
     let num2 = parseInt(num%10)*10000;
 
@@ -728,7 +730,7 @@ function  hwTask2_5()
     num/=10;
     num2 += parseInt(num)
 
-    constNum == num2?alert(`${constNum} is palendrom`):alert(`${constNum} isn't palendrom`)
+    constNum == num2 ? alert(`${constNum} is palendrom`):alert(`${constNum} isn't palendrom`)
 
 }
 
