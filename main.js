@@ -876,3 +876,165 @@ function hwTask2_10()
     }
     alert("all correct!")
 }
+/*
+let student = {
+    name: "name",
+    adr: {
+        houseNumber: 12,
+        street: "street",
+        city: "city",
+        country: "country",
+        test: {
+            test: "test",
+            test1: "test2",
+            test2: "test3",
+            test3: "test4",
+        }
+    },
+    nameTwo: "nameTwo",
+    adrTwo: {
+        houseNumber: 34,
+        street: "streetTwo",
+        city: "cityTwo",
+        country: "countryTwo",
+        adrThree: {
+            houseNumber: 44,
+            street: "streetThree",
+            city: "cityThree",
+            country: "countryThree"
+        }
+    }
+};
+
+function test()
+{
+     recursion(student);
+}
+
+function recursion(value)
+{
+    for(let item in value)
+        isObject(value[item])?  recursion(value[item]) : alert(`${item}: ${value[item]}`) ;
+}
+
+
+function isObject(value){
+    console.log(value);
+    return value !== null && typeof value === 'object';
+} */
+
+    let rectangle = 
+    {
+        height: 20,
+        weight: 60,
+        X: 3,
+        Y: 6
+    }
+
+function task5_1_2_3(object)
+{
+    let str = "";
+    for(let item in object)
+        str+=`${item}: ${object[item]}\n`;
+    alert(str);
+}
+
+function task5_4(object)
+{
+    if("height" in object && "weight" in object)
+         alert(object.height*object.weight);
+         else 
+         return;
+}
+
+function task5_5(object)
+{
+    if("height" in object && "weight" in object)
+         alert((object.height*2)+(object.weight*2));
+         else 
+         return;
+}
+function task5_6(object)
+{
+    let addWeight = prompt("Enter numer");
+    if("weight" in object)
+        object.weight += parseInt(addWeight);
+        else 
+        return;
+    alert(`New weight is ${object.weight}`);
+}
+
+function task5_7(object)
+{
+    let addHeight = prompt("Enter numer");
+    if("height" in object)
+        object.height += parseInt(addHeight);
+        else 
+        return;
+    alert(`New height is ${object.height}`);
+}
+
+
+function task5_8(object)
+{
+    let addWeight = prompt("Enter numer");
+    let addHeight = prompt("Enter numer");
+
+      if("height" in object && "weight" in object)
+        { 
+            object.weight += parseInt(addWeight);
+            object.height += parseInt(addHeight);
+       }
+       else 
+       return;
+     alert(`New size is ${object.weight}\t ${object.height}`);
+
+}
+
+function task5_9(object)
+{
+    let newX = prompt("Enter X");
+    if("X" in object)
+        object.X+= parseInt(newX);
+    else 
+        return;
+    alert(`New location X is :${object.X}`);
+}
+
+function task5_10(object)
+{
+    let newY = prompt("Enter Y");
+    if("Y" in object)
+        object.Y+= parseInt(newY);
+    else 
+        return;
+    alert(`New location Y is :${object.Y}`);
+}
+
+function task5_11(object)
+{
+    let newX = prompt("Enter X");
+    let newY = prompt("Enter Y");
+    if("X" in object && "Y" in object)
+    { 
+        object.X+= parseInt(newX);
+        object.Y+= parseInt(newY);
+    }
+    else 
+        return;
+    alert(`New location is :${object.X};${object.X}`);
+}
+
+function task15_12(object)
+{
+    let pointX = prompt("Enter X");
+    let pointY = prompt("Enter Y");
+    if("X" in object && "Y" in object)
+        if(object.X+object.weight <= pointX && object.Y+object.height <= pointY)
+            alert("point is crossing this rectangle");
+        else 
+            alert("point isn't crossing this rectangle");
+    else 
+        return;
+
+}
