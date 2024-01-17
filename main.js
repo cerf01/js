@@ -179,7 +179,7 @@ function task2_1_5()
     alert("zero coordinate");
 }
 
-function task2_2_1()
+function task2_2_1() 
 {
     let numOfMonth = prompt("Enter num of month");
     switch (numOfMonth)
@@ -522,4 +522,355 @@ function forTask4_5(number, str)
             return;
     }
     forTask4_5(number, str);
+}
+
+function hwTask1_1()
+{
+    let name = prompt("Enter name");
+
+    alert(`Hello ${name}`);
+}
+
+function hwTask1_2()
+{
+    let birthYear = parseInt(prompt("Enter year of your birth"));
+    const currYear = 2023;
+    
+    alert(`Your age is ${currYear-birthYear}`);
+}
+
+function hwTask1_3()
+{
+     let side = parseInt(prompt("Enter the size of the side of the square"));
+
+     alert(side*4);
+}
+
+function hwTask1_4()
+{
+    let r = parseInt(prompt("Enter radius"));
+
+    const p = 3.14
+
+    alert( p*Math.pow(r,2));
+}
+
+function hwTask1_5()
+{
+    let distance = parseInt(prompt("Enter distance(in km)"));
+    let timeInRoad = parseInt(prompt("Enter time(in h)"));
+
+    alert(`${distance/timeInRoad} km/h`);
+
+}
+
+function hwTask1_6()
+{
+    let dollar = parseFloat(prompt("Enter sum($)"));
+    
+    const evro = 0.92;
+
+    alert(dollar*evro);
+}
+
+function hwTask1_7()
+{
+    let cardSize = parseInt(prompt("Enter size (in Gb)"));
+
+    const fileSize = 820;
+
+    const GbInMb = 1024;
+
+    alert(parseInt(parseInt(cardSize*GbInMb)/fileSize))
+}
+
+function hwTask1_8()
+{
+    let balance = parseInt(prompt("Enter your balance"));
+    let price = parseInt(prompt("Enter price"));
+ 
+    alert(`${parseInt(balance/price)}   ${balance%price}`);
+}
+
+function hwTask1_9()
+{
+    let num = parseInt(prompt("Enter a 3 digit number"));
+
+    let numPalindrom = (num%10)*100;
+    num/=10;
+    numPalindrom +=parseInt((num%10))*10;
+    numPalindrom += parseInt(num/=10);
+    alert(numPalindrom ) ;
+}
+
+function hwTask1_10()
+{
+    let num = parseInt(prompt("Enter number"));
+
+   alert( num%2==0);
+}
+
+
+function hwTask2_1()
+{
+    let age = parseInt(prompt('Enter age'));
+
+    if(age < 12)
+    {
+        alert("A chaild");
+        return;
+    }
+    if(age >=12 && age <18)
+    {
+        alert("A teen");
+        return;
+    }
+    if(age >= 18 && age < 60)
+    {
+        alert("An adult");
+        return;
+    }
+    if(age >= 60)
+    {
+        alert("A elderly");
+        return;
+    }
+}
+
+function hwTask2_2()
+{
+    let num = parseInt(prompt("Enter a number between 0 and 9"));
+
+    switch(num)
+    {
+        case 0: alert(")");
+            break;
+
+        case 1: alert("!");
+            break;
+
+        case 2: alert("@");
+            break;
+
+        case 3: alert("#");
+            break;
+
+         case 4: alert("$");
+            break;
+
+        case 5: alert("%");
+            break;
+
+        case 6: alert("^");
+            break;    
+
+        case 7: alert("&");
+            break;
+
+        case 8: alert("*");
+            break;
+
+        case 9: alert("(");
+            break;
+
+        default: alert("error");
+            break;
+    }
+}
+
+function  hwTask2_3()
+{
+    let num = parseInt(prompt("Enter a 3 digit number"));
+    let num1 = parseInt(num%10);
+        num/=10;
+    let num2 = parseInt(num%10);
+        num/=10;
+    let num3 = parseInt(num);
+
+    if(num1 == num2 || num1 == num3|| num2 == num3)
+    {
+        alert("Have same numbers");
+        return;
+    }
+   
+    alert("Nothing wrong");
+}
+
+function  hwTask2_4()
+{
+    let year = parseInt(prompt("Enter year"));
+
+    if(year%400 == 0|| (year%4 == 0 && year%100!=0))
+    {
+        alert("Leap year");
+        return;    
+    }
+    alert("not leap year")
+}
+
+function  hwTask2_5()
+{
+    let num = parseInt(prompt("Enter a 5 digit number")); 
+
+    const constNum = num;
+
+    let num2 = parseInt(num%10)*10000;
+
+    num/=10;
+    num2 += parseInt(num%10)*1000;
+
+    num/=10;
+    num2 +=parseInt (num%10)*100;
+
+    num/=10;
+    num2 += parseInt(num%10)*10;
+
+    num/=10;
+    num2 += parseInt(num)
+
+    constNum == num2?alert(`${constNum} is palendrom`):alert(`${constNum} isn't palendrom`)
+
+}
+
+function  hwTask2_6()
+{
+    let dollar = parseFloat(prompt("Enter sum($)"));
+    let exchRate = 0 
+    let q = parseInt(prompt("Choose currency: 1 - EUR, 2 - UAN, 3 - AZN"))
+
+    switch(q)
+    {
+        case 1: exchRate = 0.92;
+        break;
+
+        case 2: exchRate =  7.19;
+            break;
+
+        case 3: exchRate = 1.69;
+            break;
+
+        default: {
+            alert("error")
+            return;
+        };
+    }
+    alert(dollar*exchRate);
+}
+
+function hwTask2_7()
+{
+    let sum  = parseInt(prompt("Enter sum")); 
+    if(sum >=200 && sum < 300)
+    {
+        alert(sum-((sum*3)/100))
+        return;
+    }
+    if(sum >=300 && sum < 500)
+    {
+        alert(sum-((sum*5)/100))
+        return;
+    }
+    if(sum >=500)
+    {
+        alert(sum-((sum*7)/100))
+        return;
+    }
+    alert(sum);
+}
+
+
+function hwTask2_8()
+{
+    let P = parseInt(prompt("Enter perim of square:"));
+    let C = parseInt(prompt("Enter circle length:"));
+
+    const p = 3.14;
+
+    let rCircle = C/2*p;
+
+    let rSquare = P/8;
+
+    rCircle <= rSquare? alert("true"):alert("false")
+
+}
+
+
+function hwTask2_9()
+{
+        let points = 0;
+
+        let userInput = prompt("2 + 2 x 2 = ...\n1) - 2\t2) - 6\t 3) - 8")
+        userInput == 2? points+=2: points+=0;
+
+        userInput = prompt("5 x 10 / 1 = ...\n1) - 50\t2) - -50\t 3) - 49")
+        userInput == 1? points+=2: points+=0;
+
+        userInput = prompt("1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1 = ...\n1) - 1234\t2) - 11111\t 3) - 115");
+        
+        userInput == 3? points+=2: points+=0;
+
+        switch(points)
+        {
+            case 0: 
+                alert("U sooooooooooooo bad...");
+                break;
+            
+            case 2: 
+                alert("Bra, u didn't try...");
+                break;
+
+            case 4: 
+                alert("Great! But u can better");
+                break;
+            
+            case 6: 
+                alert("Wow, are u not lazy or lucky?");
+                break;
+            default:
+                alert("something got wrong");
+            break;
+        }
+
+}
+
+
+function hwTask2_10()
+{
+    let date = prompt("Enter date(dd:mm:yy)").split(":");
+    if(date[0] > 31 && date[0] < 1 )
+    {
+        alert("wrong date 1!")
+        return;
+    }
+    if(date[1] > 12 && date[1] < 1 )
+    {
+        alert("wrong date 2!")
+        return;
+    }
+    if(date[2] > 2024 && date[2] < 1970 )
+    {
+        alert("wrong date 32!")
+        return;
+    }
+    if(date[0] > 30 &&(date[1] == 1 &&date[1] >= 3&&  date[1] <=7 && date[1]%2==0))
+    {
+        alert("wrong date 4!")
+        return;
+    }
+    if(date[0] > 30 && date[1] >=8 &&  date[1] <=12 && date[1]%2!=0)
+    {
+        alert("wrong date 4.5!")
+        return;
+    }
+    if(date[0]>28 &&  date[2]%4 != 0 && date[2]%100==0)
+    {
+        alert("wrong date 5!")
+        return;
+    }
+    if(date[1] == 2 && date[0]>29)
+    {
+        alert("wrong date 6!")
+        return;
+    }
+    alert("all correct!")
 }
