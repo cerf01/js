@@ -11,21 +11,45 @@
             background-color: rgb(48, 47, 47);
             font-family: 'Courier New', Courier, monospace;
         }
-        .in-content1
+        .in-content1, .in-content2
         {
             background-color: rgb(0, 0, 0);
-            margin: 1%;
-            border-style:solid;
-            padding: 1%;
-            border-radius: 400px;
+            margin: 1%;                 
             color: rgb(255, 255, 255);
             font-weight: bold;
             font-family: 'Courier New', Courier, monospace;
         }
-        .in-content1:hover
+        .in-content1
         {
-        background-color: rgb(70, 70, 70);
-        cursor: pointer;
+            padding: 1%;
+            border-radius: 400px;
+        }
+
+        a
+        {
+            text-decoration: none;
+        }
+
+        a .in-content2
+        {
+            border-style:groove;
+            border-width: 2px;                
+            margin: 15px;    
+        }
+
+        .in-content2
+        {
+          
+            padding-left: 25px;
+            padding-right: 25px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border-radius: 100px;
+        }
+        .in-content1:hover, .in-content2:hover
+        {
+            background-color: rgb(70, 70, 70);
+            cursor: pointer;
         }
         .content1
         {
@@ -136,6 +160,46 @@
         <button class = "in-content1" onclick="task5_10(rectangle)">task1.10</button>
         <button class = "in-content1" onclick="task5_11(rectangle)">task1.11</button>
         <button class = "in-content1" onclick="task5_12(rectangle)">task1.12</button>
+    </div>
+    <hr>
+
+    <span>Lab. 6</span>
+    <div class="content1">
+        <a href="lab6/ex1/ex1.html">   
+            <div class = "in-content2">
+                task1
+            </div>
+        </a>
+
+        <a href="lab6/ex2/ex2.html">
+           <div class = "in-content2">
+                task2
+            </div>
+        </a>
+
+       <a href="lab6/ex3/ex3.html"> 
+            <div class = "in-content2">
+                task3
+            </div>
+        </a>
+
+        <a href="lab6/ex4/ex4.html"> 
+            <div class = "in-content2">
+                task4
+            </div>
+        </a>
+      
+        <a href="lab6/ex5/ex5.html"> 
+            <div class = "in-content2">
+                task5
+            </div>
+        </a>
+
+        <a href="lab6/ex6/ex6.html"> 
+            <div class = "in-content2">
+                task6
+            </div>
+        </a>
     </div>
     <hr>
    

@@ -1038,7 +1038,7 @@ function task5_11(object)
     alert(`New location is :${object.X};${object.X}`);
 }
 
-function task15_12(object)
+function task5_12(object)
 {
     let pointX = prompt("Enter X");
     let pointY = prompt("Enter Y");
@@ -1052,3 +1052,4 @@ function task15_12(object)
         return;
 
 }
+
