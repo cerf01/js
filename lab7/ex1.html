@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src ="public/main.js" defer></script>
+    <style>
+         table
+        {
+            background-color: black;
+            width: 300px;
+            height: 200px;      
+            text-align: center;
+        }
+        tr
+        {
+            background-color: rgb(122, 122, 122);           
+        }
+        td
+        {
+            width: 100px;
+        }
+        .RGB-num
+        {
+            width: 50px;
+        }
+        #colorsContainers
+        {
+            margin: 5%;
+            background-color: rgb(97, 97, 97);
+            display: flex;
+            padding: 1%;
+        }
+        .color-container
+        {
+            width: 250px;
+            height: 70px;
+            border-style:solid;
+            border-color: brown;
+            display: flex;
+            text-align: center;
+            margin-right: 10px;
+
+        }
+        .color-container p 
+        {
+            margin-left: 20px;
+            margin-right: 10px;
+            font-size:16px;
+            font-weight: bold;
+        }
+        .color
+        {
+            width: 75px;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+ 
+      
+        <label for="textInput">Login:</label>
+        <input type="text" name="textInput" id="textInput"><br>
+
+        <label for="passInput">Password:</label>
+        <input type="password" name="passInput" id="passInput"> <br>
+        Remember me<input type="checkbox" name="chBox" id="chBox"><br>
+
+        <input type="button" value="Button" id ="myButton" onclick="getUserInputValue('textInput','chBox','passInput')">
+       
+        <br>
+        <hr>
+        <br>
+
+        <label for="emailInput">Email:</label>
+        <input type="email" name="emailInput" id="emailInput"><br>
+
+        <label for="loginInput">Login:</label>
+        <input type="text" name="loginInput" id="loginInput"><br>
+
+        <label for="passInput">Password:</label>
+        <input type="password" name="passInput" id="passInput2"> <br>
+
+        <label for="passInput">Repeat password :</label>
+        <input type="password" name="passInput" id="passInput1"> <br>
+
+
+        <input type="button" value="Button" id ="myButton" onclick="checkEmail('emailInput','passInput1','passInput2','loginInput')">
+
+
+        <br>
+        <hr>
+        <br>
+
+        <label for="firstnameInput">Firstname:</label>
+        <input type="text" name="firstnameInput" id="firstnameInput"><br>
+
+        <label for="lastnameInput">Lastname:</label>
+        <input type="text" name="lastnameInput" id="lastnameInput"><br>
+
+        <c for="dateInput">Birthday</label>
+        <input type="date" id="dateInput">
+
+        <label >Gender:</label>
+        <input type="radio" name ="genderPick" id="M" value="M">
+        <label for="">Male</label>
+        <input type="radio" name="genderPick" id="F" value="F">
+        <label for="F">Female</label><br>
+
+
+        <label for="countries">Country:</label>
+        <select name="countries" id="countries">
+            <option value=" "> </option>
+            <option value="UA">UA</option>
+            <option value="UK">UK</option>
+            <option value="USA">USA</option>
+            <option value="UTF-8">UTF-8</option>
+        </select>
+
+        <label for="cities">City:</label>
+        <select name="cities" id="cities">
+            <option value=" "> </option>
+            <option value="City-17">City-17</option>
+            <option value="City-122">City-122</option>
+            <option value="London">London</option>
+            <option value="www\home.com">www\home.com</option>
+        </select><br>
+
+        <label>Skills:</label>
+        <input type="checkbox" class="skill-checkbox" id = "checkSkill1" value = "HTML">
+        <label for="checkSkill1">HTML</label>
+
+        <input type="checkbox" class="skill-checkbox"  id = "checkSkill2" value = "CSS">
+        <label for="checkSkill2">CSS</label>
+
+        <input type="checkbox" class="skill-checkbox"  id = "checkSkill3" value="JS">
+        <label for="checkSkill3">JS</label>
+
+        <input type="checkbox" class="skill-checkbox"  id = "checkSkill4" value="PHP">
+        <label for="checkSkill4">PHP</label>
+
+        <input type="checkbox" class="skill-checkbox"  id = "checkSkill5" value="C++">
+        <label for="checkSkill5">C++</label>
+
+        <input type="checkbox" class="skill-checkbox"  id = "checkSkill6" value="JAVA">
+        <label for="checkSkill6">JAVA</label>
+
+        <input type="checkbox" class="skill-checkbox"  id = "checkSkill" value="C#">
+        <label for="checkSkill7">C#</label><br>
+
+
+        <input type="button" value="save" id ="myButton" onclick="setUserTabl()">
+
+        <table>
+            <tr>
+                <td>
+                Firstname:
+                </td>
+                <td class = "user-data" >
+               
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Lastname
+                </td>
+                <td class = "user-data" >
+               
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Birthday
+                </td>
+                <td class = "user-data" >
+               
+                </td>
+            </tr>
+            <tr>
+                <td>
+               Gender
+                </td>
+                <td class = "user-data" >
+              
+                </td>
+            </tr>
+            <tr>
+                <td>
+               Counrty
+                </td>
+                <td class = "user-data" >
+               
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+               City
+                </td>
+                <td class = "user-data" >
+              
+                </td>
+            </tr>
+            <tr>
+                <td>
+               Skills
+                </td>
+                <td class = "user-data" >
+              
+                </td>
+            </tr>
+        </table>
+
+        <br>
+        <hr>
+        <br>
+        <label for="R">R</label><input type="number" class = "RGB-num" name="R"  min = 0 max = 255 id="R">
+        <label for="G">G</label><input type="number" class = "RGB-num" name="G" min = 0  max = 255 id="G">
+        <label for="B">B</label><input type="number" class = "RGB-num" name="B"  min = 0 max = 255 id="B"><br>
+        <input type="button" value="Add new color" onclick="addNewColor('R','G','B')">
+    <div id="colorsContainers">
+       
+    </div>
+
+    <div>
+        <div id="questionsContainer">
+            <h3>All questions:</h3>
+        </div>
+        <label for="question">Question:</label>
+        <input type="text" name="question" id="question"><br>
+        <label for="correctAnswer">Correct answer:</label>
+        <input type="text" name="answer1" id="correctAnswer"><br>
+        <label for="wrongAnswer">Wrong answer:</label>
+        <input type="text" name="answer2" id="wrongAnswer"><br>
+        <input type="button" value="Button" onclick="addQuestion()">
+    </div>
+
+  
+
+    
+</body>
+</html>

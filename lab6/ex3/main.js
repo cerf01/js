@@ -7,3 +7,4 @@ function ShowHide()
     isHiden? text.style.display = "none":text.style.display = "block";
     isHiden = !isHiden;
 }   
+

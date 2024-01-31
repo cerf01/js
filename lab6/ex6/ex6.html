@@ -25,6 +25,7 @@
             position: absolute;          
             width: 400px;
             height: 100px;
+            max-width: 400px;
             background-color: white;
         }
         #front
@@ -33,7 +34,14 @@
             max-width: 400px;
             height: 100px;
             background-color: aquamarine;
+            width: 0px;
            
+        }
+        button
+        {
+            margin-top: 250px;
+            width: 200px;
+            margin-left: 150px;
         }
         
     </style>
@@ -46,8 +54,8 @@
          
             </div>
         </div>
-       
+        <button onclick="AddWidth('front')">+5%</button>
     </div>
-    <button onclick="AddWidth('front')">5+</button>
+ 
 </body>
 </html>

@@ -780,7 +780,6 @@ function hwTask2_7()
     alert(sum);
 }
 
-
 function hwTask2_8()
 {
     let P = parseInt(prompt("Enter perim of square:"));
@@ -795,7 +794,6 @@ function hwTask2_8()
     rCircle <= rSquare? alert("true"):alert("false")
 
 }
-
 
 function hwTask2_9()
 {
@@ -834,7 +832,6 @@ function hwTask2_9()
         }
 
 }
-
 
 function hwTask2_10()
 {
@@ -876,6 +873,238 @@ function hwTask2_10()
     }
     alert("all correct!")
 }
+
+function hwTask3_1()
+{
+    let num1 = parseInt(prompt("Enter number1"));
+    let num2 = parseInt(prompt("Enter number2"));
+    let max = Math.max(num1,num2);
+    let i = Math.min(num1,num2);
+    let count =0;
+    for(i; i <= max;i++)
+        count+=i;
+    alert(count);
+}
+function hwTask3_2()
+{
+    let num1 = parseInt(prompt("Enter number1"));
+    let num2 = parseInt(prompt("Enter number2"));
+    let step = 2;
+    let max = Math.max(num1,num2);
+    let maxNum = 0;
+    while(step < max)
+    {
+        if(num1%step ==0 && num2%step==0)
+            maxNum = step;
+        ++step;
+    }
+    alert(maxNum)
+}
+
+function hwTask3_3()
+{
+    let num1 = parseInt(prompt("Enter number1"));
+    let num2 = parseInt(prompt("Enter number2"));
+    let step = 2;
+    let max = Math.max(num1,num2);
+
+    while(step < max)
+    {
+        if(num1%step ==0  &&num2%step==0)
+            alert(step);
+        ++step;
+    }
+}
+
+function hwTask3_4()
+{
+    let num = parseInt(prompt("Enter number"));
+    let count = 0;
+    while(true)
+    {
+            count++;
+            num/=10;
+            if(num<=0)
+                break;
+    }
+    alert(count);
+}
+
+function hwTask3_5()
+{
+   
+    let count1 = 0;
+    let count2 = 0;
+    let count3 = 0;
+    let count4 = 0;
+    let count5 = 0;
+
+    let arr = []; 
+    arr = forHwTask3_5_2(arr);
+
+
+    for(let i = 0; i < arr.length; i++)
+    {
+
+        switch( forHwTask3_5(arr[i]))
+        {
+            case 1:
+                count1++;
+            break;
+            case 2:
+                count2++;
+            break;
+            case 3:
+                count3++;
+            break;
+            default:alert("error");
+                break;
+        }
+        
+        if(arr[i]%2==0)
+            count4++;
+        else
+            count5++;
+    }
+
+
+    alert(`${count1} \n${count2} \n${count3} \n${count4} \n${count5}`);
+}
+
+function forHwTask3_5(num)
+{
+    if(num>0)
+        return 1;
+    if(num===0)
+        return 2;
+    if(num<0)
+       return 3;
+}
+
+function forHwTask3_5_2(arr)
+{
+    let num = 0;
+   for(let i=0;i<10;i++)
+    {
+        num =  prompt("Enter number");   
+        if(num=="")
+            break;
+        arr[i]  = parseInt(num);
+    }
+    return arr;
+}
+
+function hwTask3_6()
+{   
+    let q ="";
+
+    while(true)
+    {
+        task2_2_2();
+
+        q = prompt("Try again? y(Yes) n(No)")
+        if(q ==="n"||q==="No")
+           return;
+    }
+
+}
+
+
+
+function hwTask3_7()
+{
+    let num = prompt("Enter a 5 digit number"); 
+    let count = parseInt(prompt("Enter number"));
+    let arr = [];
+  
+    for(let i = 0; i < num.length;i++)
+        arr[i] = parseInt(num[i]);
+    
+
+    forHwTask3_7(arr, count);
+   
+    let str = ""
+
+    for(let item of arr)
+        str+=item;
+
+    alert(str);
+
+}
+function forHwTask3_7(arr, counter)
+{
+    for(counter; counter > 0; counter--){
+        for(let j = 0; j < arr.length-1;j++)
+        {
+            temp = arr[j];
+            arr[j] = arr[j+1]
+            arr[j+1] = temp;
+        }
+
+        counter--;
+    }
+}
+
+function hwTask3_8()
+{
+    let daysOfWeek =["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    let count = 0;
+
+    while(true)
+    {
+        alert(daysOfWeek[count]);
+
+        count++;
+
+        if(count >6)
+            count=0;
+    }
+}
+
+function hwTask3_9()
+{
+let num = 2;
+let str ="";
+for(num; num <=9;num++)
+  { 
+     for(let i = 1; i <=10;i++ )
+        str+=`${num} * ${i} = ${num*i}\n`;
+
+    alert(str);
+    str ="";
+ } 
+}
+
+function hwTask3_10()
+{
+    let min = 0;
+    let max = 100;
+    let N =0;
+
+    let answer = ""
+    while(true)
+    {
+        N = Math.floor((min+max)/2);
+        answer=prompt(`Your num is:${N}? ([y] - Yes [n] - No)`).charAt(0);
+        if(answer === 'y')
+            {
+                alert("i'm guessed!")
+                return;   
+            }
+        answer = prompt("is this number [m] - more or [l] - less?")
+        switch(answer)
+        {
+            case 'l':
+                max = N;
+            break;
+
+            case 'm':
+                min = N+1;
+            break;          
+        }
+    }
+}
+
 /*
 let student = {
     name: "name",
