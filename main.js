@@ -402,15 +402,13 @@ function task3_3_3()
     let count = 0;
     for(let i = 1; i < num; i++)
     {
-        if(num%i==0)
-        {  
-              count++;
-            if(count > 2)
+        if(num % i == 0) 
+            count++;
+        if(count > 2)
             {
                 alert("is not prime")
                 return;
             }
-        }
     }
     alert("is prime")
 }
@@ -1105,6 +1103,126 @@ function hwTask3_10()
     }
 }
 
+function hwTask4_1()
+{
+
+    let num = parseInt(prompt("enter number"));
+    let mult = parseInt(prompt("enter mult"));
+
+     forHwTask4_1(num, mult,1);
+
+}
+function forHwTask4_1(num, mult,count)
+{
+    if(count >= mult )
+    {
+        alert(num);
+        return;
+    }
+    num*=mult;
+    count++;
+    console.log(count)
+    forHwTask4_1(num, mult,count)
+}
+
+function hwTask4_2()
+{
+    let num1 = parseInt(prompt("Enter number 1"));
+    let num2 = parseInt(prompt("Enter number 2"));
+
+    forHwTask4_2(num1, num2, Math.max(num1,num2), 2, 0);
+
+}
+
+function forHwTask4_2(num1, num2, max, step, maxNum)
+{
+
+    if(step > max)
+    {
+        alert(maxNum);
+        return;
+    }
+
+    if(num1%step == 0 && num2%step == 0)
+        maxNum = step;
+
+    ++step;
+
+    forHwTask4_2(num1, num2, max, step, maxNum);
+}
+
+function hwTask4_3()
+{
+    let num = parseInt(prompt("Enter number"));
+
+    forHwTask4_3(num,0);
+}
+
+function forHwTask4_3(num, max)
+{
+    if(num <=0)
+    {
+        alert(max);
+        return;
+    }
+
+    let temp = num%10;
+    num=parseInt(num/10);
+
+    if(temp > max)
+        max = temp;
+
+    forHwTask4_3(num, max);
+}
+
+
+function  hwTask4_4()
+{
+    let num = parseInt(prompt("Enter number"));
+    let count = 0;
+    forHwTask4_4(num, count, 1)
+    
+}
+
+function forHwTask4_4(num, count, step)
+{
+    if(count >1|| step >= num)
+    {
+        alert(count>1?"is not prime":"is prime");
+        return;
+    }
+
+    if(num % i == 0) 
+        count++;
+    step++;
+    forHwTask4_4(num, count, step)
+}
+
+
+function  hwTask4_6()
+{
+    let arr = [1,1];
+
+    let pos = parseInt(prompt("Enter position of number"));
+
+    alert(arr[0]);
+    forHwTask4_6(arr, pos, 1)
+}
+
+function forHwTask4_6(arr, pos, i)
+{
+    if(pos <=0)
+        return;
+    alert(arr[i]);
+    
+    i++;
+    
+    arr[i] = arr[i-1]+arr[i-2];
+    
+    pos--;
+    forHwTask4_6(arr, pos, i)
+
+}
 /*
 let student = {
     name: "name",
