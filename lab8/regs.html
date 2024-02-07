@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>User info</title>
+        <script src="main.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        
+        <div class="user-info-content">
+            <hr>
+            <h1>User info</h1> 
+            <div class="user-infos">
+                <div class="left-side">
+                <div>
+                    <label for="fname">Firstname:</label>
+                    <p align="right" class = "error-text" id = "enptyFname">must be</p><br>
+                    <input type="text" class="lineInput"  name = "fname" id ="fname">
+                </div>
+                <div>
+                    <label for="birth">Year of birth:</label>
+                    <p align="right" class = "error-text" id = "emptyBirth">must be</p><br>
+                    <input type="number" class="lineInput"  name = "birth" id ="birth" min="1870">
+                </div>
+
+                <div>
+                    <label for="phone">Phonnenumber:</label>
+                    <input type="text" class="lineInput"  name = "phone" id ="phone">
+                </div>
+
+                </div>
+                <div>
+                    <div class="right-side">
+                        <label for="lname">Lastname:</label>
+                        <p align="right" class = "error-text" id = "emptyLname">must be</p><br>
+                        <input type="email" class="lineInput"  name = "email" id ="email">
+                    </div>
+                    <label for="gender">Gender:</label>
+                    <select  class="lineInput" name="gender" id="gender">
+                        <option value=" "> </option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                    <div>
+                        <label for="Skype">Skype:</label>                   
+                        <input type="text" class="lineInput" name = "skype" id ="skype">
+                    </div>
+                </div>
+            </div>
+            <input type="button" class="save-button" value="Save" onclick="signUp()">
+        </div>
+    </body>
+</html>

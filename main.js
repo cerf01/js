@@ -1007,8 +1007,6 @@ function hwTask3_6()
 
 }
 
-
-
 function hwTask3_7()
 {
     let num = prompt("Enter a 5 digit number"); 

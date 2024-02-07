@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="reg-content">
+        <h1 align="center">Registration</h1>
+        <div class="reg-data">
+            <div>
+                <label for="login">Login:</label><br>
+                <input type="text" class="lineInput"  name = "login" id ="login">
+            </div>
+            <div>
+                <label for="email">E-mail:</label>
+                <p align="right" class = "error-text" id = "incorrectMail">incorrect email</p><br>
+                <input type="email" class="lineInput"  name = "email" id ="email">
+            </div>
+            <div>
+                <label for="password">Password:</label> 
+                <p align="right"  class = "error-text" id = "incorrectPass">isues password</p><br>        
+                <input type="password" class="lineInput"  name = "password" id ="password">
+            </div>
+            <div>
+                <label for="repeatPass">Repeat:</label>
+                <p align="right" s  class = "error-text" id = "incorrectRepeat">pass must be the same</p><br>
+                <input type="password" class="lineInput" name = "repeatPass" id ="repeatPass">
+            </div>
+        </div>
+        <input type="button" class="sign-button" value="Sign Up" onclick="signUp()">
+    </div>
+</body>
+</html>

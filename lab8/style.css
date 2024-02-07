@@ -1,0 +1,87 @@
+html
+{
+    background-color: rgb(64, 98, 114); 
+  
+}
+
+.reg-content
+{
+    position: absolute;
+    background-color: rgb(0, 141, 206);
+    width: 500px;
+    max-height: 800px;
+    left: 35%;
+    top: 20%;
+    padding: 1%;
+    border-radius: 10px;
+    
+}
+
+.user-info-content
+{
+    position: absolute;
+    background-color: rgb(0, 141, 206);
+    width: 850px;
+    max-height: 1000px;
+    left: 28%;
+    top: 20%;
+    padding: 1%;
+    border-radius: 10px;
+}
+
+.user-infos
+{
+    display: flex;
+    padding: 10px;
+}
+.user-infos div
+{
+    margin: 10px;
+}
+
+.reg-data
+{
+    margin: 10%;
+}
+
+.reg-content label
+{
+    margin: 10px;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.lineInput
+{
+    height: 30px;
+    width: 350px;
+    margin: 10px;
+    border-radius: 10px;
+} 
+
+.sign-button, .save-button
+{
+    width: 280px;
+    font-size: 18px;
+    padding: 1%;
+    border-radius: 10px;
+}
+
+.sign-button
+{
+    margin-left: 20%;
+}
+
+.save-button
+{
+    margin-left: 28%;
+}
+
+.error-text
+{
+   color: rgb(180, 8, 8);
+    font-weight: bold;
+    margin: 0;
+    margin-right: 30px;
+    display: none;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js" defer></script>
+    <style>     
+        .lineInput
+        {
+            height: 30px;
+            width: 120px;
+            margin: 10px;
+            border-radius: 10px;
+            margin: 7%;
+          
+        } 
+
+        .options
+        {
+            
+            border-color: brown;
+            border-style: solid;
+            padding: 20px;   
+            margin: 20px;                
+            background-color: antiquewhite;            
+            flex-wrap:wrap;
+            min-width: 200px;
+            width: 10%;           
+            max-height: 100%;
+            position: absolute;
+            top: 0;
+
+        }
+
+        #brushStuff
+        {
+            margin-bottom: 13px;
+        }
+
+        #heightInput,#designItems, #brushStuff
+        {
+            display: none;
+        }
+
+        #paintBox
+        {
+            border-style: solid;
+            border-color: brown;
+            margin-right: 10px;
+        }
+
+        .main-container
+        {
+            display: flex;
+        }
+
+        .left-side-panel
+        {
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="left-side-panel">
+            <div class ="options">
+                <label for="figWidth">Choose figure:</label><br>
+                <select  class="lineInput" name="figures" id="figures">
+                    <option value="0"> </option>
+                    <option value="1" onclick="onChangeFigure()">Circle</option>
+                    <option value="2" onclick="onChangeFigure()">Rectangle</option>
+                    <option value="3" onclick="onChangeFigure()">Rhomb</option>
+                    <option value="4" onclick="onChangeFigure()">Triangle</option>
+                    <option value="5" onclick="onChangeFigure()">Brush</option>
+                </select>
+
+                <div>
+                    <div id="brushStuff">
+                        <label for="cap">Choose type of brush:</label><br>
+                        <select  class="lineInput" name="cap" id="cap">        
+                            <option value="round">Round</option>
+                            <option value="square">Square</option>
+                        </select><br>
+                        <label for="drawing">Drawing:</label>
+                        <input type="radio" id="drawing" name="brushType" value="0" checked ><br>
+                        <label for="clearing">Clearing:</label> 
+                        <input type="radio" id="clearing" name="brushType" value="1"><br>
+                    </div>                   
+                </div>  
+
+                <div id="designItems">
+                    <label for="figWidth">Width:</label><br>
+                    <input class="lineInput" id="figWidth" type="range" min ="10" max="250"><br>
+        
+                    <div id="heightInput"> 
+                        <label for="figHeight">Height:</label><br>
+                        <input class="lineInput" id="figHeight" type="range" min ="10" max="250">
+                    </div>
+                
+                    <label for="color">Color:</label>
+                    <input class="lineInput" type="color" id = "color">
+
+                    <input  type="button" class="lineInput" value="clear" name="clearButton" id="clearButton" onclick="clearAll()">
+                </div>
+            </div>
+
+        </div>
+       
+        <div class= "input-display">
+        
+            <canvas id="paintBox"></canvas>
+        </div>
+    </div>
+    
+
+</body>
+</html>
