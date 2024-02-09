@@ -1256,6 +1256,7 @@ function test()
      recursion(student);
 }
 
+ */
 function recursion(value)
 {
     for(let item in value)
@@ -1266,8 +1267,7 @@ function recursion(value)
 function isObject(value){
     console.log(value);
     return value !== null && typeof value === 'object';
-} */
-
+}
     let rectangle = 
     {
         height: 20,
@@ -1324,7 +1324,6 @@ function task5_7(object)
 
     alert(`New height is ${object.height}`);
 }
-
 
 function task5_8(object)
 {
@@ -1398,3 +1397,170 @@ function task5_12(object)
 
 }
 
+let car = 
+{
+    manufacturer:"Audi",
+    model: "Cue 7", 
+    release:"2012:21:12",
+    averageSpeed:50
+    
+}
+
+function hwTask5_1_1(object)
+{
+    recursion(object);
+}
+
+function hwTask5_1_2(object)
+{
+ let distance = parseInt(prompt("input distance"));
+
+ let timeInRoad = distance/object.averageSpeed;
+
+
+    alert(timeInRoad+parseInt(timeInRoad/4));
+}
+
+let fraction1 =
+{
+    numerator:0,
+    denominator:0
+}
+
+let fraction2 =
+{
+    numerator:0,
+    denominator:0
+}
+
+function  hwTask5_2_1_2_3_4_5()
+{
+    let numNumer = parseInt(prompt("enter numerator for number 1"));
+    let numDenom = parseInt(prompt("enter denominator for number 1"));
+
+    fraction1.numerator = numNumer;
+    fraction1.denominator = numDenom;
+
+    numNumer = parseInt(prompt("enter numerator for number 2"));
+    numDenom = parseInt(prompt("enter denominator for number 2"));
+
+    fraction2.numerator = numNumer;
+    fraction2.denominator = numDenom;
+
+    addiction(fraction1, fraction2);
+    subtraction(fraction1, fraction2);
+    multiplication(fraction1, fraction2);
+    division(fraction1, fraction2);
+
+    contraction(fraction1);
+    contraction(fraction2);
+}
+
+ function addiction(num1, num2)
+ {
+    if (num1.denominator!=num2.denominator)
+    {
+       alert("\nSorry!, try numbers with the same denominator!\n");
+       return;
+    }
+
+       alert(num1.numerator + num2.numerator + "\n---\n "+ num1.denominator);
+
+ }
+
+function subtraction(num1, num2)
+{
+    if (num1.denominator!=num2.denominator)
+    {
+       alert("\nSorry!, try numbers with the same denominator!\n");
+       return;
+    }
+    alert(num1.numerator - num2.numerator + "\n---\n " + num1.denominator);
+
+}
+
+function multiplication(num1, num2)
+{
+    alert(num1.numerator * num2.numerator + "\n----\n " + num1.denominator*num2.denominator);
+}
+
+function division(num1, num2)
+{
+    alert( num1.numerator * num2.denominator + "\n----\n " + num1.denominator * num2.numerator);
+}
+
+function contraction(num)
+{
+    let gcds = gcd(num.numerator, num.denominator) 
+    if(gcds == 1)
+    {
+        alert("impossible operation");
+        return;
+    }
+    
+    num.numerator = parseInt( num.denominator/gcds);
+    num.denominator =parseInt( num.denominator/gcds);
+
+    alert(num.numerator + "\n----\n " + num.denominator);
+}
+
+function gcd(a, b)
+{
+   if (b == 0) 
+        return a;
+    return gcd(b, a % b);
+}
+
+let userTime =
+{
+    hours : 20,
+    minutes:30,
+    seconds:45
+}
+
+function hwTask5_3_1(time)
+{
+    alert(`${time.hours}:${time.minutes}:${time.seconds}`)
+}
+
+function hwTask5_3_2(time)
+{
+    let addSeconds = parseInt(prompt("enter seconds"));
+    time.seconds+=addSeconds;
+    while(time.seconds>59)
+        {
+            time.seconds-=60
+            time.minutes++;
+        }
+
+        hwTask5_3_1(time);
+
+      
+}
+
+function hwTask5_3_3(time)
+{
+    let addMinutes = parseInt(prompt("enter minutes"));
+    time.minutes+=addMinutes;
+    while(time.minutes>59)
+        {
+            time.minutes-=60
+            time.hours++;
+        }
+         
+    hwTask5_3_1(time);      
+}
+
+function hwTask5_3_4(time)
+{
+    let addHours = parseInt(prompt("enter hours"));
+    time.hours+=addHours;
+    while(true)
+    {
+        if( time.hours >24)
+            time.hours-=24;
+        else
+            break;
+    }    
+    hwTask5_3_1(time);      
+}
