@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js" defer></script>
+    <title >Document</title>
+
+    <style>
+        #colorsContainers
+        {
+            margin: 5%;
+            background-color: rgb(97, 97, 97);
+            display: flex;
+            padding: 1%;
+            flex-wrap: wrap;
+
+        }
+        .color-container
+        {
+            width: 250px;
+            height: 140px;
+            border-style:solid;
+            border-color: brown;
+            display: flex;
+            text-align: center;
+            margin-right: 10px;
+            margin: 10px;
+            flex-wrap: wrap;
+
+      
+        }
+        .color-container p 
+        {
+            margin: 10px;
+
+            font-size:16px;
+            font-weight: bold;
+        }
+        .color
+        {
+            width: 75px;
+            height: 75px;;
+        }
+    </style>
+</head>
+<body>
+    <label for="R">Color</label><br><input type="text" class = "RGB-num" name="colorName" id="colorName"><br>
+    <label for="G">Type</label><br>
+    <select type="number" class = "RGB-num" name="type" min = 0  max = 255 id="type">
+        <option value="0"></option>
+        <option value ="RGB">RGB</option>
+        <option value ="RGBA">RGBA</option>    
+        <option value ="HEX">HEX</option>
+    <select>    <br>
+    <label for="B">Code</label><br><input type="text" class = "RGB-num" name="colorCode" id="colorCode"><br>
+    <input type="button" value="Add new color" onclick="addNewColor('type')">
+<div id="colorsContainers">
+   
+</div>
+</body>
+</html>
