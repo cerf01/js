@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type = "module" src="main.js" defer></script>   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="reg-content" id = "loginDiv">
+        <h1 align="center">Login</h1>
+        <div class="inputs-container">
+            <div>
+                <p align="right"  class = "error-text" id = "incorrectLogin">isues login</p><br>   
+                <input type="text"  placeholder="Enter login"  class="lineInput"  name = "login" id ="login">
+            </div>
+           
+            <div>
+                <p align="right"  class = "error-text" id = "incorrectPass">isues password</p><br>        
+                <input type="password"  placeholder="Enter password" class="lineInput"  id ="loginPassword">
+            </div>
+        </div> 
+        <button type="button" class="sign-button" id = "loginBtn">Sign Up</button>
+      <p align="center">
+        <a class="page-limks" id="regLink">Don't have no an account? Create it</a>
+        </p>
+    </div>
+
+    <div class="reg-content" id = "regiDiv">
+        <h1 align="center">Registration</h1>
+        <div class="inputs-container">   
+            <div>
+                <p align="right" class = "error-text" id = "incorrectLogin">isues login</p><br>
+                <input type="text"  placeholder="Make your login"  class="lineInput"  name = "login" id ="regLogin">
+            </div>
+            <div>
+                <p align="right" class = "error-text" id = "incorrectMail">incorrect email</p><br>
+                <input type="email"  placeholder="Enter your e-mail" class="lineInput"  name = "email" id ="email">
+            </div>
+            <div>
+                <p align="right"  class = "error-text" id = "incorrectPass">isues password</p><br>        
+                <input type="password"  placeholder="Enter password" class="lineInput"  name = "password" id ="password">
+            </div>
+            <div>            
+                <p align="right"  class = "error-text" id = "incorrectRepeat">pass must be the same</p><br>
+                <input type="password" placeholder="Repeat password" class="lineInput" name = "repeatPass" id ="repeatPass">
+            </div>      
+        </div>
+              
+        <button type="button" class="sign-button" id = "regBtn">Create</button>
+        
+        <p align="center">
+            <a class="page-limks" id="loginLink">Already have an account? Sign in</a>
+        </p>
+    </div>
+
+    
+</body>
+</html>

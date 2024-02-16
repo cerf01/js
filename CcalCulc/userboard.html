@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="ds.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="user-info-content">
+        <hr>
+        <h2>Please, enter more info about you</h2> 
+        <div class="user-infos">
+            <div class="one-side-container">
+                <div>
+                    <p align="right" class = "error-text" id = "enptyFname">must be</p><br>
+                    <input type="text"placeholder= "Firstname" class="lineInput"  id ="fname">
+                </div>
+                <div>
+                    <p align="right" class = "error-text" id = "emptyBirth">must be</p><br>
+                    <input type="text"placeholder="Date of birth:" class="lineInput" id ="birth" onfocus="(this.type='date')">
+                </div>
+                <div>
+                    <p align="right" class = "error-text" id = "emptyBirth">must be</p><br>
+                    <input type="number"  placeholder = "Weight(kg)" class="lineInput"  id ="weight" min="40" max = "200">
+                </div>
+            </div>
+
+            <div class="one-side-container">
+                <div>   
+                    <p align="right" class = "error-text" id = "emptyLname">must be</p><br>
+                    <input type="text"  placeholder="Lastname" class="lineInput" id ="lname">
+                </div>
+
+                    <select class="lineInput-select" name="gender" id="gender">
+                        <option value=" " >*Select gender*</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select> 
+
+                <div>                
+                    <p align="right" class = "error-text" id = "emptyBirth">must be</p><br>
+                    <input type="number" placeholder="Height(sm)" class="lineInput"  id ="height" min="100" max="220">
+                </div>
+            </div>
+        </div>
+       <button class="sign-button" id ="confBtn">Confirm</button>
+    </div>
+</body>
+</html>

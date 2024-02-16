@@ -1,0 +1,295 @@
+html
+{
+    background-color: rgb(64, 98, 114); 
+  
+}
+.main-content
+{
+  width: 98%;
+  min-width:400px;
+  background-color: rgb(0, 141, 206);
+  margin-left: 1%;
+  margin-right: 1%;
+  height:auto;
+  min-width:120px;
+  border-radius:10px;
+  padding: 10px;
+
+}
+
+.pageslist-container:hover
+{
+  height: 180px;
+}
+
+.pageslist-container ul
+{
+  list-style: none;
+  padding:0;
+}
+.pageslist-container 
+{
+  cursor: default;
+}
+.pageslist-container li
+{
+ 	margin-bottom: 15px;
+  	margin-top: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius:10px;
+  	padding:10px;
+    background-color: rgba(0, 120, 215,0.66);
+    
+}
+
+.pageslist-container li:hover
+{
+  cursor: pointer;
+  background-color: rgba(0, 0, 0,0.1);
+}
+.pageslist-container span:hover
+{
+    cursor: pointer;
+}
+.pageslist-container span
+{
+    text-decoration:underline ;
+}
+
+.pageslist-container
+{
+ 	height: 30px;
+    width: 150px;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s;
+	margin-right: 30%;
+  	font-size: 120%;
+    background-color: rgb(0, 120, 215);
+    border-radius: 10px;
+  	float: right;
+  	position: absolute;
+    
+}
+
+.reg-content
+{
+    position: absolute;
+    background-color: rgb(0, 141, 206);
+    width: 20%;
+    max-height: auto;
+    left: 35%;
+    top: 20%;
+    border-radius: 10px;
+    padding: 30px;
+    min-width: 300px;
+    
+}
+.main-container
+{
+  margin-left: 10%;
+}
+
+.user-info-content
+{
+    position: absolute;
+    background-color: rgb(0, 141, 206);
+    width: 35%;
+    max-height: auto;
+    left: 28%;
+    top: 20%;
+    padding: 1%;
+    border-radius: 10px;
+    min-width: 300px;
+}
+
+.inputs-container
+{
+    width: 80%;
+    min-width: 150px;
+    margin: 10%;
+}
+
+.user-infos
+{
+  display: flex;
+  flex-wrap: wrap;
+ 
+}
+.one-side-container
+{
+    margin-left: 10%;  
+    margin-right: 10%;
+    width: 30%;
+}
+
+.lineInput
+{
+    height: 30px;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  	min-width:110px;
+
+} 
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  
+  margin: 0;
+}
+
+input[type=number] {
+    appearance:initial;
+    -moz-appearance: textfield;
+  }
+
+.lineInput-select
+{   height: 35px;
+    width: 100%;
+  	min-width:110px;
+    border-radius: 10px;
+    margin-top: 21px;
+
+}
+
+.sign-button 
+{
+    width: 30%;
+    font-size: 18px;
+    padding: 1%;
+    border-radius: 10px;
+    position: relative;
+    left: 33%;
+    margin-top:10px
+}
+
+.header-container
+{
+  min-height:90px;
+  min-width:320px;
+  height: 80px; 
+  padding: 2%;
+  margin-bottom: 1%;
+    background-color: rgb(0, 120, 215);
+  border-radius: 10px;
+  position: sticky;
+  position: -webkit-sticky;
+  top:0;
+  flex-wrap:wrap;
+  
+}
+
+.header-headline
+{
+    font-size: 250%;
+     margin-top: 20px; 
+     font-weight: bold;
+}
+
+.log-container:hover
+{
+  background-color: rgba(0, 0, 0,0.1);
+  cursor:pointer;
+}
+
+.log-container
+{
+
+  border-style: solid;
+  border-radius: 10px;
+  height: 25px;
+  width: 100px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  padding-right: 15px;
+  padding-left: 5px; 
+  margin-top: 20px;
+  float: right;
+  
+}
+
+.log-container span::before
+{
+    padding-left: 20px;
+    padding-right: 21px;
+    background-size: 52%;
+    background-repeat: no-repeat;
+    background-position: center ;
+    content: "";
+    font-size: 25px;
+  	background-image: url("https://cdn-icons-png.flaticon.com/512/1077/1077114.png")
+}
+
+.error-text
+{
+   color: rgb(180, 8, 8);
+    font-weight: bold;
+    margin: 0;
+    margin-right: 30px;
+    display: none;
+}
+
+#regiDiv
+{
+    display:none;
+} 
+
+td::before
+{
+    padding-left: 27px;
+    padding-right: 24px;
+    background-size: 52%;
+    background-repeat: no-repeat;
+    background-position: center ;
+    content: "";
+    font-size: 25px;
+}
+#name::before{
+    background-image: url("./icons/user.png");
+}
+#height::before{
+    background-image: url("./icons/height.png");
+}
+#weight::before
+{
+    background-image: url("./icons/weighing-scale.png");
+}
+#birth::before{
+    background-image: url("./icons/calendar.png");
+}
+#gender::before
+{
+    background-image: url("./icons/gender.png");
+}
+#age::before
+{
+    background-image: url("./icons/age-group.png");
+}
+
+.container
+{
+    width: 25%;
+    margin: 10px;
+}
+
+#toLogout
+{
+  display: none;
+}
+
+.content
+{
+    background-color: rgb(0, 141, 206);
+    width: 95%;
+    border-radius: 20px;
+    padding: 25px;
+}
+
+.page-limks:hover
+{
+    cursor: pointer;
+}    

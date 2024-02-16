@@ -1,0 +1,80 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script type ="module" src="./moduls/mainWin.js" defer></script>
+  <title>Browser</title>
+</head>
+
+<body>
+ 	
+       <div class = "header-container">
+          <div class = "log-container">
+            <span id = "toLogout">Log out</span>  
+             <span id ="toLogin">Log in</span>  
+         </div>
+         
+           	<div class = "header-headline" >Claculate clalories</div>
+          <div class = "pageslist-container">
+            <span>All pages</span>
+
+              <ul>
+                 <li><a href="main.html">Main</a></li>
+                <li><a href="userpage.html">User info</a></li>
+              </ul>
+
+         </div>
+        
+      </div>
+  
+<div class ="main-content">
+
+      <div class ="main-container">
+              <div class="container">
+                <h3>Calculate <span>BMI</span></h3>
+                <input class="lineInput" placeholder ="Enter your height(m)" id ="BMIHeight"  type="number">
+                <input class="lineInput" placeholder ="Enter your weight(kg)" id ="BMIWeight" type="number">  
+                <button class="resultBtn">Get result</button> 
+                <p class = "answer"></p>
+              </div>
+
+              <div  class="container">
+              <h3>Calculate Per day </h3>
+              <input class="lineInput" placeholder ="Enter your height(sm)" id ="PDHeight"type="number">
+              <input class="lineInput" placeholder ="Enter your weight(kg)" id ="PDWeight"type="number">  
+
+              <select class="lineInput-select" id="gender">
+                  <option value=" " >*Select gender*</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+              </select> 
+                
+                 <select class="lineInput-select" id="activity">
+                  <option value=" " >*Set physical activity*</option>
+                  <option value="M/A">Minimal/Absent</option>
+                  <option value="L">Low</option>
+                  <option value="M">Medium</option>
+                  <option value="H">High</option>
+                  <option value="E">Extreme</option>
+                </select> 
+
+              <input class="lineInput" placeholder="Enter your age" id = "age"type="number"> 
+              <button class="resultBtn">Get result</button> 
+              <p class = "answer"></p>
+          </div>
+
+          <div  class="container">
+              <h3>Calculate eate</h3>
+              <input class="lineInput" placeholder="Enter vage of food( in gramm)" type="number" id="foodVage">
+              <input class="lineInput" placeholder="Enter clalories count(on 100g)" type="number" id ="calorCount">  
+              <button class="resultBtn">Get result</button> 
+              <p class = "answer"></p>
+          </div>       
+  		</div>
+ </div>
+
+</body>
+
+</html>
