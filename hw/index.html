@@ -84,13 +84,12 @@
         #tooltip #tooltiptext {
             visibility:hidden;
             width: 120px;
-            height: 15px;
             background-color: #555;
             color: #fff;
             text-align: center;
             border-radius: 6px;
             padding: 5px 0;
-            position: relative;
+            position: absolute;
             z-index: 1;
             bottom: 150%;
             left: 50%;
@@ -98,18 +97,10 @@
         }
         #tooltip 
         {
-            margin: 20px;
             position: relative;
             display: inline-block;
         }
-        #tooltipContainer
-        {
-            width: 300px;
-            height: 100px;
-            margin: 20px;
-            border-color: black;
-            border-style: solid;
-        }
+
     </style>
 </head>
 <body>
@@ -147,10 +138,33 @@
         <span class ="book-string" id = "book7" onclick="onPick(6)">book 7</span><br>
     </div>
 
-    <div id = "tooltipContainer">
-        <div id="tooltip">Hover over me
+        <button id="tooltip">Button
             <span id="tooltiptext">Tooltip text</span>
-        </div> 
-    </div>
+        </button> 
+
+        <div>
+            <ul>          
+                <li>This PC
+                        <li><ul>
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                        </ul></li>
+
+                        <li><ul>
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                        </ul></li>
+
+                       <li> <ul>
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                        </ul></li>
+                </li>
+            </ul>
+        </div>
+
 </body>
 </html>
